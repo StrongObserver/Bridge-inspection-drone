@@ -193,6 +193,7 @@ rosbag record -O middle_place \
 ```
 不过我尝试了fastcalib的多视角联合标定，发现效果很差（0.14m左右）如果是单视角标定，误差大概在4mm以内，所以最后我用的还是单视角（中间哪个视角）
 标定结果如下图
+
 <img width="960" height="600" alt="image" src="https://github.com/user-attachments/assets/26d71c4a-6670-48f3-915f-05ca5626f321" />
 
 <img width="1280" height="668" alt="image" src="https://github.com/user-attachments/assets/38650c68-981c-4ecf-8cd3-7a7330ec162c" />
@@ -285,7 +286,7 @@ rosbag record -O outdoor_2_9_3 \
 ***
 ## 四、实现效果
 gazebo仿真（一键起飞+定高自动切offboard+ego-planner避障+lio2定位，并用rviz实时展示lio、真值、融合值）
-（这里是视频）
+
 实物无人机外观
 <img width="1280" height="959" alt="image" src="https://github.com/user-attachments/assets/db534af0-2fcc-4d5e-bfdc-6d52097e78c5" />
 
@@ -296,11 +297,13 @@ gazebo仿真（一键起飞+定高自动切offboard+ego-planner避障+lio2定位
 室外（由开阔 -> 拒止过渡环境）
 （这里是视频）
 速度对比
+
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/5d5f8c3b-bb5f-414b-baeb-081e3d557bab" />
 
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/9e025f2b-7837-49f6-98f2-582596b4d118" />
 
 XYZ位置结果对比
+
 <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/700a0a69-65b3-4a4a-ad0e-04c734b8ddde" />
 
 <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/64330ab6-c07c-4205-9820-fdd827fa8c3a" />
