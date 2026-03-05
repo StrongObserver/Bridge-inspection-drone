@@ -7,7 +7,7 @@
 2. 实现无人机动力学模型与多源传感器融合的自主导航方法，并同步建图，传感器数量≥3
 3. 通过多场景试验与评估，验证算法有效性
 ## 三、开发日志
-1.9 软降落打印并安装 & 转速采集并绘制四个电机曲线
+3.9 软降落打印并安装 & 转速采集并绘制四个电机曲线
 运行：
 ```
 scp nvidia@192.168.8.103:/home/nvidia/rpm_test/motor2_rpm_data_ros.xlsx .
@@ -27,7 +27,7 @@ rosbag record /uav3/mavros/esc_status -O motor1_rpm
 </div>
 
 ***
-1.10 起飞测试并录制视频 & 分析飞行日志
+3.10 起飞测试并录制视频 & 分析飞行日志
 PX4 官方首推、最标准的振动/状态分析工具就是 Flight Review。
 网址https://logs.px4.io/
 如何分析图像：https://docs.px4.io/main/en/log/flight_review
@@ -47,7 +47,7 @@ PX4 官方首推、最标准的振动/状态分析工具就是 Flight Review。
 看了一下acc0和acc1果然有问题，并且倒数第二张图存在明显的亮带，大概在60-80HZ左右，这种频率一般是机械振动，不像是桨叶破损引发的振动
 说明一直有一个跟转速无关的稳定振动源，有两种可能，一种是铝管，一种是电机安装的问题，明天可以换电机、拆铝管试一试
 ***
-1.12 通过QGC逐个电机进行测试并更换问题电机1 & 调试动态滤波器参数
+4.12 通过QGC逐个电机进行测试并更换问题电机1 & 调试动态滤波器参数
 关于动态滤波器的主要作用和参数应该怎么选：
 作用：DNF（动态滤波器）更多作用于 陀螺仪引发的控制振动，对机械共振的直接振幅抑制有限
 参数怎么选:PX4提供两种动态陷波滤波的方式，一种是用FFT另一种是基于转速RPM，FFT这种方法主要是用于机架弯曲、螺丝松动、电机动平衡差等原因导致的机械结构上的共振；基于转速的话是用来处理跟电机转速有关的共振。
@@ -105,7 +105,7 @@ IMU_GYRO_DNF_MIN  = 50
 ```
 
 ***
-1.14 fastlivo2标定
+4.14 fastlivo2标定
 ```
 rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.08 image:=/fisheye/left/image_raw --fisheye-fix-skew --fisheye-recompute-extrinsicsts --fisheye-check-conditions
 ```
@@ -191,7 +191,7 @@ projection
 0.000000 0.000000 1.000000 0.000000
 ```
 ***
-1.16 相机雷达联合标定
+4.16 相机雷达联合标定
 我在我自己的小nuc上部署了fastcalib环境
 录制bag包（左左右三个位置，每个位置30s）
 以中间为例（由于fastlivo2是单目，目前用的是左目）
@@ -210,7 +210,7 @@ rosbag record -O middle_place \
 </div>
 
 ***
-1.20 根据教程重新设置动态滤波器等参数（使用RPM滤波而不是FFT）
+5.20 根据教程重新设置动态滤波器等参数（使用RPM滤波而不是FFT）
 发现一个油管上比较好的PX4 PID调节的教程：
 PX4 Ultimate Tuning Guide - Part 2: Gyro Filtering - YouTube
 这个博主说一般用RMP滤波，而且其实esc_status里的转速本来就是主要是滤波用的，给你上层接口只是顺手而已...
@@ -225,7 +225,7 @@ PX4 Ultimate Tuning Guide - Part 2: Gyro Filtering - YouTube
 
 另外室内的话EV_CTRL是要全部勾选比较好，因为EV_CTRL是控制外部的定位源如何影响EKF2，它没有外部的定位源的情况下自然是拿到的信息越多越好
 ***
-1.31动捕标定
+5.31动捕标定
 动捕设置：默认y轴是向上的，但是可以自己修改，如PX4官方教程所示：https://docs.px4.io/main/en/ros/external_position_estimation#optitrack-mocap
 Specific System Setups部分https://v20.wiki.optitrack.com/index.php?title=Template:Coordinate_System，motive中是有advance network setting的，应该是在Data Streaming里
 设置完成之后，现在Z轴是朝上的，带上L型矫正杆，短轴摆放的方向就是X轴的正方向（也就是说，短轴朝向就是决定了动捕系统的X的正方向）
@@ -246,14 +246,14 @@ ros包我已经上传百度网盘（vrpn_ws）
 动捕文件使用方法，打开我保存的那个final配置文件即可。
 另外设置xy方向的时候不用管它那个地面的标识是怎么标的，好像它把z给标到地面上了，无所谓你只要按要求放置（短轴从拐角点到伸长点的方向是x轴的正方向），然后在Advanced Network Settings把z轴设置成朝上就行。
 ***
-2.1 PX4 自动调参
+6.1 PX4 自动调参
 官方教程：
 https://docs.ncnynl.com/en/px4/zh/config/autotune_fw.html
 还有个视频：
 https://www.youtube.com/watch?v=5xswOhhqrIQ&t=1s
 可以看到只有角速度控制器和姿态控制器有自动调参这个选项，然后速度控制器和位置控制器只能手调
 ***
-2.4 室外测试
+6.4 室外测试
 环绕模式果然是只有在飞机起飞之后才能设置的，起飞之前左键根本没有这个选项
 MC_ORBIT_RAD_MAX可以设置环绕最大半径
 MC_ORBIT_YAW_MODE可以设置环绕时的机头指向
@@ -293,7 +293,7 @@ rosbag record -O outdoor_2_9_3 \
 </div>
 ```
 ***
-2.8 QGC导入plan文件 && Mission花式设置
+6.8 QGC导入plan文件 && Mission花式设置
 首先确定四个点：双扭线的上下左右，以及你希望的飞行高度
 然后运行/home/cyf/Apps/QGroundControl/flight_plan/gen_double.py这个代码
 <div align="center">
