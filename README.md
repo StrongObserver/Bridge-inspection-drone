@@ -285,17 +285,15 @@ rosbag record -O outdoor_2_9_3 \
 
 ***
 ## 四、实现效果
-gazebo仿真（一键起飞+定高自动切offboard+ego-planner避障+lio2定位，并用rviz实时展示lio、真值、融合值）
-
+gazebo仿真视频（一键起飞+定高自动切offboard+ego-planner避障+lio2定位，并用rviz实时展示lio、真值、融合值）
+https://www.bilibili.com/video/BV1vUPrzvEEM/?spm_id_from=333.1387.upload.video_card.click&vd_source=7333e62484af6e486633b3903bad9d1a
 实物无人机外观
 <img width="1280" height="959" alt="image" src="https://github.com/user-attachments/assets/db534af0-2fcc-4d5e-bfdc-6d52097e78c5" />
 
-室内
-
-室外（开阔）
-（这里是视频）
-室外（由开阔 -> 拒止过渡环境）
-（这里是视频）
+室外视频（开阔）
+https://www.bilibili.com/video/BV1okPrzzEDu/?spm_id_from=333.1387.upload.video_card.click&vd_source=7333e62484af6e486633b3903bad9d1a
+室外桥梁实飞视频（由开阔 -> 拒止过渡环境）
+https://www.bilibili.com/video/BV1BkPrzzEco/?spm_id_from=333.1387.upload.video_card.click&vd_source=7333e62484af6e486633b3903bad9d1a
 速度对比
 
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/5d5f8c3b-bb5f-414b-baeb-081e3d557bab" />
