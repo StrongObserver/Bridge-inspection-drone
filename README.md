@@ -303,21 +303,21 @@ gazebo仿真（一键起飞+定高自动切offboard+ego-planner避障+lio2定位
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/9e025f2b-7837-49f6-98f2-582596b4d118" />
 
 XYZ位置结果对比
+<div align="center">
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/700a0a69-65b3-4a4a-ad0e-04c734b8ddde" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/700a0a69-65b3-4a4a-ad0e-04c734b8ddde" />
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/64330ab6-c07c-4205-9820-fdd827fa8c3a" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/64330ab6-c07c-4205-9820-fdd827fa8c3a" />
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/26c44f6b-0301-4b7d-8ff9-540de2a91dc6" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/26c44f6b-0301-4b7d-8ff9-540de2a91dc6" />
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/8eacf7a5-3416-44ff-8dd2-4e56a4408bad" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/8eacf7a5-3416-44ff-8dd2-4e56a4408bad" />
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/67e25fe2-3549-4be0-8686-434aa5aad1d3" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/67e25fe2-3549-4be0-8686-434aa5aad1d3" />
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/a59228f4-5eda-4a07-a793-38ae39869b74" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/a59228f4-5eda-4a07-a793-38ae39869b74" />
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/7362b63f-b918-438f-95fb-0ab01a153420" />
 
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/7362b63f-b918-438f-95fb-0ab01a153420" />
-
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/a8c8cf56-3b8c-4f79-b11c-e5c26927ca0a" />
-
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/a8c8cf56-3b8c-4f79-b11c-e5c26927ca0a" />
+</div>
 
